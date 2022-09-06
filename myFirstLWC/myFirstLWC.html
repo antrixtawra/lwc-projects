@@ -1,0 +1,49 @@
+<template>
+    <template if:true={show}>
+        <lightning-card title="Employee Information">
+            <div class="slds-m-around_medium"> 
+            <div class="slds-col">
+
+        <lightning-input  label="Enter Name" value={name} onchange={nameHandler}></lightning-input>
+            </div>
+
+            <div class="slds-col">
+
+        <lightning-input  label="Enter Age" value={age} onchange={ageHandler}></lightning-input>
+           </div>
+        </div>
+
+
+        <div class="slds-m-around_medium">
+            <div class="slds-col">
+            
+           <lightning-input  label="Enter Salary" value={salary} onchange={salaryHandler}></lightning-input>
+             </div>
+        
+
+            <div class="slds-col">
+            
+           <lightning-input  label="Enter Phone Number" value={phone} onchange={phoneHandler}></lightning-input>
+            </div>
+            <br/>
+            <div class="slds-col">
+            
+           <lightning-button  label="Save" onclick={saveButtonHandler}></lightning-button> 
+                 </div>
+        </div>
+ </lightning-card>
+     </template>
+
+
+     <template if:false={show}>
+        <lightning-card title="Employee Details">
+            <div class="slds-m-around_medium">
+                <p> Employee Name: {name}</p>
+                <p> Employee Age: {age}</p>
+                <p> Employee Salary: {salary}</p>
+                <p> Employee Phone Number: {phone}</p>
+            </div>
+        </lightning-card>
+        </template>
+    
+</template>
